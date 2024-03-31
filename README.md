@@ -1,1 +1,7 @@
 # digital_catalog
+
+This project involves creating a digital catalog by implementing classes that build its components and some design patterns that help organize and extract data. Each course in the catalog has a professor, a set of assistants, students' grades along with their names and a unique ID. Professors establish a strategy for selecting the best student based on exam grades, partial grades, or the total grade. Two types of courses are constructed: partial and full, with different promotion conditions within each. The Builder design pattern is used to set the fields of a course, and the abstract method buildCourse is implemented in PartialCourse and FullCourse to customize it.
+
+Users who have access to this catalog are of types: Teacher, Assistant, Student, Parent, and Observer, and they are built using the Factory pattern, instantiated in UserFactory. Each student is assigned a parent as their observer, who will supervise their academic activity: when a grade is assigned to them, their observer will be notified. For teachers and assistants, the Visitor and Memento patterns are implemented, providing them with the ability to give grades throughout the year and to back up the catalog to revert to a previously saved state in case they want to discard the changes made. With the visit method, an assistant can assign a partial grade during the year, whereas a teacher can assign the exam grade.
+
+Project developed using IntelliJ IDEA.
